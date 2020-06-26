@@ -18,6 +18,11 @@
         $_SESSION['nama'] = $row['nama'];
         $_SESSION['level'] = $row['level'];
 
-        header("location:".BASE_URL."index.php?page=my_profile&module=pesanan&action=list");
+        if(isset($_SESSION["proses_pemesanan"])){
+            unset($_SESSION["proses_pemesanan"]);
+            header("location:".BASE_URL."data_pemesan.html");
+        }else{
+            header("location: ".BASE_URL."index.php?page=my_profile&module=pesanan&action=list");
+        }
     }
 ?>
