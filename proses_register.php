@@ -3,7 +3,7 @@
     include_once("function/koneksi.php");
 
     $level = "customer";
-    $status = "off";
+    $status = "on";
     $nama_lengkap = $_POST["nama_lengkap"];
     $email = $_POST["email"];
     $phone = $_POST["phone"];
